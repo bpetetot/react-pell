@@ -6,7 +6,16 @@ import 'pell/dist/pell.min.css'
 
 class Editor extends Component {
   componentDidMount() {
-    const { onChange, styleWithCSS, actionBarClass, buttonClass, contentClass } = this.props
+    const {
+      onChange,
+      styleWithCSS,
+      actionBarClass,
+      buttonClass,
+      contentClass,
+      defaultContent,
+    } = this.props
+
+    // initialize pell editor
     pell.init({
       element: this.container,
       onChange: html => onChange(html),
@@ -17,6 +26,9 @@ class Editor extends Component {
         content: contentClass,
       },
     })
+
+    // set default content
+    this.container.content.innerHTML = defaultContent
   }
 
   render() {
@@ -26,6 +38,7 @@ class Editor extends Component {
 
 Editor.propTypes = {
   onChange: PropTypes.func.isRequired,
+  defaultContent: PropTypes.string,
   styleWithCSS: PropTypes.bool,
   containerClass: PropTypes.string,
   actionBarClass: PropTypes.string,
@@ -34,6 +47,7 @@ Editor.propTypes = {
 }
 
 Editor.defaultProps = {
+  defaultContent: '',
   styleWithCSS: false,
   containerClass: 'pell-container',
   actionBarClass: 'pell-actionbar',
