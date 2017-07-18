@@ -1,1 +1,1 @@
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t(require("react")):"function"==typeof define&&define.amd?define(["react"],t):e["react-pell"]=t(e.React)}(this,function(e){"use strict";e=e&&e.hasOwnProperty("default")?e.default:e;return function(){return e.createElement("div",null,"Hello")}});
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o():"function"==typeof define&&define.amd?define(o):o()}(0,function(){"use strict";console.log("hello")});
