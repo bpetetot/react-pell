@@ -1,1 +1,1 @@
-export { default } from './Test'
+console.log('hello')
