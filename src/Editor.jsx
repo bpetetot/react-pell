@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import pell from 'pell'
 
+import 'pell/dist/pell.min.css'
+
 class Editor extends Component {
 
   componentDidMount() {
@@ -18,8 +20,12 @@ class Editor extends Component {
 }
 
 Editor.propTypes = {
-  styleWithCSS: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
+  styleWithCSS: PropTypes.bool,
+}
+
+Editor.defaultProps = {
+  styleWithCSS: false,
 }
 
 export default Editor

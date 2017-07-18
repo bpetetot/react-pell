@@ -2,6 +2,7 @@ import fs from 'fs'
 import babel from 'rollup-plugin-babel'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
+import postcss from 'rollup-plugin-postcss'
 import uglify from 'rollup-plugin-uglify'
 
 const pkg = JSON.parse(fs.readFileSync('./package.json'))
@@ -31,6 +32,9 @@ export default {
       output: {
         comments: false,
       },
+    }),
+    postcss({
+      extensions: ['.css'],
     }),
   ],
 }
