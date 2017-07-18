@@ -1,0 +1,9 @@
+{
+  "name": "react-pell",
+  "version": "0.1.0",
+  "description": "react wrapper for pell",
+  "main": "index.js",
+  "repository": "https://github.com/bpetetot/react-pell.git",
+  "author": "Benjamin Petetot <bpetetot@gmail.com>",
+  "license": "MIT"
+}
