@@ -2,24 +2,38 @@
   "name": "react-pell",
   "version": "0.1.0",
   "description": "react wrapper for pell",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/bpetetot/react-pell.git",
   "author": "Benjamin Petetot <bpetetot@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint --ext js,jsx src"
+    "lint": "eslint --ext js,jsx src",
+    "build": "cross-env NODE_ENV=build rollup -c ./config/rollup.config.js"
   },
   "devDependencies": {
-    "rollup": "^0.45.2",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-uglify": "^2.0.1",
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "rollup": "^0.45.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "peerDependencies": {
+    "react": "^15.6.1"
+  },
+  "babel": {
+    "presets": ["es2015-rollup", "react"],
+    "plugins": ["external-helpers"]
   },
   "eslintConfig": {
     "parser": "babel-eslint",

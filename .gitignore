@@ -1,9 +1,6 @@
 # dependency directory
 node_modules/
 
-# build directory
-build/
-
 # coverage directory
 coverage/
 
@@ -14,3 +11,4 @@ yarn-error.log*
 
 # misc
 *.DS_Store
+.vscode/

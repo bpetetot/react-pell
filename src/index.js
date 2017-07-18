@@ -1,1 +1,1 @@
-console.log('react-pell')
+export { default } from './Test'
