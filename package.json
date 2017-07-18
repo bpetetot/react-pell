@@ -10,6 +10,7 @@
     "lint": "eslint --ext js,jsx src",
     "build": "cross-env NODE_ENV=build rollup -c ./config/rollup.config.js"
   },
+  "prepack": "yarn build",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
