@@ -1,1 +1,1 @@
-console.log('hello')
+export { default } from './Editor'

@@ -19,6 +19,8 @@ export default {
   external,
   globals: {
     react: 'React',
+    pell: 'pell',
+    'prop-types': 'PropTypes',
   },
   plugins: [
     nodeResolve({

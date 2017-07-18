@@ -11,6 +11,13 @@
     "build": "cross-env NODE_ENV=build rollup -c ./config/rollup.config.js"
   },
   "prepack": "yarn build",
+  "dependencies": {
+    "pell": "^0.7.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
@@ -29,18 +36,25 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1"
   },
-  "peerDependencies": {
-    "react": "^15.6.1"
-  },
   "babel": {
-    "presets": ["es2015-rollup", "react"],
-    "plugins": ["external-helpers"]
+    "presets": [
+      "es2015-rollup",
+      "react"
+    ],
+    "plugins": [
+      "external-helpers"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "extends": ["airbnb"],
+    "extends": [
+      "airbnb"
+    ],
     "rules": {
-      "semi": [2, "never"],
+      "semi": [
+        2,
+        "never"
+      ],
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,
       "import/extensions": 0
