@@ -1,6 +1,6 @@
 # react-pell
 
-> React component wrapping the wysiwyg pell editor
+> React component wrapping [the wysiwyg pell editor](https://github.com/jaredreich/pell)
 
 ## Getting started
 
