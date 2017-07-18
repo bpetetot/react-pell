@@ -5,10 +5,6 @@ import commonjs from 'rollup-plugin-commonjs'
 import uglify from 'rollup-plugin-uglify'
 
 const pkg = JSON.parse(fs.readFileSync('./package.json'))
-const external = [
-  ...Object.keys(pkg.dependencies || {}),
-  ...Object.keys(pkg.peerDependencies || {}),
-]
 
 export default {
   entry: pkg['jsnext:main'] || 'src/index.js',
@@ -16,10 +12,9 @@ export default {
   sourceMap: false,
   moduleName: pkg.amdName || pkg.name,
   format: process.env.FORMAT || 'umd',
-  external,
+  external: [...Object.keys(pkg.peerDependencies)],
   globals: {
     react: 'React',
-    pell: 'pell',
     'prop-types': 'PropTypes',
   },
   plugins: [
