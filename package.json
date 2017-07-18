@@ -1,7 +1,7 @@
 {
   "name": "react-pell",
   "version": "0.1.0-alpha",
-  "description": "react wrapper for pell",
+  "description": "React component wrapping the wysiwyg pell editor",
   "main": "build/index.js",
   "repository": "https://github.com/bpetetot/react-pell.git",
   "author": "Benjamin Petetot <bpetetot@gmail.com>",
