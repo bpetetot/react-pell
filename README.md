@@ -1,7 +1,6 @@
 # react-pell
 
-> React component wrapping [the wysiwyg pell editor](https://github.com/jaredreich/pell)
-> HTML and Markdown editor based on pell
+> React component wrapping a HTML and Markdown editor based on [the wysiwyg pell editor](https://github.com/jaredreich/pell)
 
 ## Contents
  - [Getting started](#getting-started)
@@ -56,6 +55,7 @@ import Editor from 'react-pell'
 ```
 
 **Prop types :**
+
 property | type | required | description
 ----------|------|----------|------------
 onChange | func | true | function handling changes from the editor, the output html is the first parameter
@@ -93,6 +93,7 @@ import Editor from 'react-pell/plugins/markdown'
 **Prop types :**
 
 Same props as the Basic HTML pell editor with following props added :
+
 property | type | required | description
 ----------|------|----------|------------
 converters | array | false | converters used to handle custom convertions from HTML to markdown. [see to-markdown documentation for more details](https://github.com/domchristie/to-markdown/blob/master/README.md#converters-array)
