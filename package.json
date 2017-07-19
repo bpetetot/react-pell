@@ -15,7 +15,10 @@
   },
   "prepack": "yarn build",
   "dependencies": {
-    "pell": "^0.7.0"
+    "install": "^0.10.1",
+    "npm": "^5.3.0",
+    "pell": "^0.7.0",
+    "showdown": "^1.7.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
