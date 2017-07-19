@@ -1,10 +1,11 @@
 {
   "name": "react-pell",
   "version": "0.2.0",
-  "description": "React component wrapping the wysiwyg pell editor",
+  "description": "React component wrapping a HTML and Markdown editor based on the wysiwyg pell editor",
   "main": "build/index.js",
   "repository": "https://github.com/bpetetot/react-pell.git",
   "author": "Benjamin Petetot <bpetetot@gmail.com>",
+  "keywords": ["react", "pell", "editor", "html", "markdown", "wysiwyg"],
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext js,jsx src",
