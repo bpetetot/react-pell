@@ -99,6 +99,6 @@ property | type | required | description
 converters | array | false | converters used to handle custom convertions from HTML to markdown. [see to-markdown documentation for more details](https://github.com/domchristie/to-markdown/blob/master/README.md#converters-array)
 gmf | bool | true | beta support for GitHub flavored markdown (GFM)
 
-## LICENCE
+## LICENSE
 
 MIT
