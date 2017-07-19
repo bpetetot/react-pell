@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "React component wrapping the wysiwyg pell editor",
   "main": "build/index.js",
-  "markdown": "markdown.js",
   "repository": "https://github.com/bpetetot/react-pell.git",
   "author": "Benjamin Petetot <bpetetot@gmail.com>",
   "license": "MIT",
@@ -15,8 +14,6 @@
   },
   "prepack": "yarn build",
   "dependencies": {
-    "install": "^0.10.1",
-    "npm": "^5.3.0",
     "pell": "^0.7.0",
     "showdown": "^1.7.1",
     "to-markdown": "^3.1.0"
