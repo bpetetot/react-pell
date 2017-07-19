@@ -22,6 +22,8 @@
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.1",
@@ -43,7 +45,9 @@
       "react"
     ],
     "plugins": [
-      "external-helpers"
+      "external-helpers",
+      "transform-class-properties",
+      "transform-object-rest-spread"
     ]
   },
   "eslintConfig": {
@@ -58,7 +62,8 @@
       ],
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,
-      "import/extensions": 0
+      "import/extensions": 0,
+      "react/forbid-prop-types": 0
     }
   }
 }
