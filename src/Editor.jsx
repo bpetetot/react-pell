@@ -8,6 +8,7 @@ class Editor extends Component {
   componentDidMount() {
     const {
       onChange,
+      actions,
       styleWithCSS,
       actionBarClass,
       buttonClass,
@@ -19,6 +20,7 @@ class Editor extends Component {
     pell.init({
       element: this.container,
       onChange: html => onChange(html),
+      actions: this.mapActions(actions),
       styleWithCSS,
       classes: {
         actionbar: actionBarClass,
@@ -31,6 +33,19 @@ class Editor extends Component {
     this.container.content.innerHTML = defaultContent
   }
 
+  // pass pell object to custom actions callback
+  mapActions = (actions) => {
+    if (actions) {
+      return actions.map((e) => {
+        if (typeof e === 'object' && e.result) {
+          return { ...e, result: () => e.result(pell) }
+        }
+        return e
+      })
+    }
+    return actions
+  }
+
   render() {
     return <div ref={e => (this.container = e)} className={this.props.containerClass} />
   }
@@ -39,6 +54,7 @@ class Editor extends Component {
 Editor.propTypes = {
   onChange: PropTypes.func.isRequired,
   defaultContent: PropTypes.string,
+  actions: PropTypes.array,
   styleWithCSS: PropTypes.bool,
   containerClass: PropTypes.string,
   actionBarClass: PropTypes.string,
@@ -49,6 +65,19 @@ Editor.propTypes = {
 Editor.defaultProps = {
   defaultContent: '',
   styleWithCSS: false,
+  actions: [
+    'bold',
+    'italic',
+    'underline',
+    'strikethrough',
+    'heading1',
+    'heading2',
+    'olist',
+    'ulist',
+    'quote',
+    'code',
+    'line',
+  ],
   containerClass: 'pell-container',
   actionBarClass: 'pell-actionbar',
   buttonClass: 'pell-button',
