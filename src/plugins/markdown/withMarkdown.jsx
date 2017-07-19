@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import showdown from 'showdown'
+import toMarkdown from 'to-markdown/dist/to-markdown'
 
 export default Editor =>
   class extends Component {
     handleMarkdownChange = (html) => {
-      this.props.onChange(html)
+      this.props.onChange(toMarkdown(html))
     }
 
     toHtml = (markdown) => {
