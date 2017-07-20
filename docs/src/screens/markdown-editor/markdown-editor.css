@@ -1,13 +1,13 @@
-.htmlEditor {
+.markdownEditor {
   display: flex;
   justify-content: space-between;
 }
 
-.htmlEditor > div {
+.markdownEditor > div {
   width: 50%;
   flex: 0 0 50%;
 }
 
-.htmlEditor_code {
+.markdownEditor_code {
   margin-left: 20px;
 }

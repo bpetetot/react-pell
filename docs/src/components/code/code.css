@@ -1,17 +1,18 @@
 .code {
   border: 1px solid #ddd;
   border-radius: 3px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .code > pre {
   margin: 0;
-  padding: 10px;
-  height: 100%;
 }
 
 .code > pre > code {
-  height: 300px;
   white-space:pre-wrap;
+  padding: 10px;
+  height: calc(300px - 32px);
 }
 
 .code__title {

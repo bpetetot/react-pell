@@ -1,19 +1,17 @@
-import toMarkdown from 'to-markdown/dist/to-markdown'
-
 export default [
-  // Fenced code blocks
-  {
-    filter: node => toMarkdown.isBlock(node) && node.nodeName === 'PRE',
-    replacement: content => `\n\n\`\`\`\n${content}\n\`\`\`\n\n`,
-  },
-  // remove divs
+  // replace div
   {
     filter: 'div',
-    replacement: content => `\n${content}\n`,
+    replacement: content => `\n${content}`,
   },
   // not managed in markdown
   {
-    filter: ['u'],
+    filter: ['u', 'span'],
     replacement: content => content,
+  },
+  // Fenced code blocks
+  {
+    filter: node => node.nodeName === 'PRE',
+    replacement: content => `\n\n\`\`\`\n${content}\n\`\`\`\n\n`,
   },
 ]

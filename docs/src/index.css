@@ -16,4 +16,10 @@ body {
 .pell-container {
   border: 1px solid #ddd;
   border-radius: 3px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.pell-content {
+  height: calc(300px - 32px) !important;
 }

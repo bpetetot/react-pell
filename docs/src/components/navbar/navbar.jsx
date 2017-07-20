@@ -15,7 +15,7 @@ const Navbar = ({ className }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            github
+            sources on github
           </a>
         </nav>
       </div>

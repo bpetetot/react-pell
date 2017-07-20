@@ -15,7 +15,7 @@ class HtmlEditor extends Component {
   }
 
   componentDidMount() {
-    this.setState(() => ({ content: this.editor.getContent().innerHTML }))
+    this.setState(() => ({ content: this.editor.getContent() }))
   }
 
   handleChange = (html) => {
@@ -32,7 +32,12 @@ class HtmlEditor extends Component {
             onChange={this.handleChange}
             defaultContent={defaultContent}
           />
-          <Code title="Output : HTML" language="HTML" content={this.state.content} />
+          <Code
+            title="Output : HTML"
+            language="HTML"
+            className="htmlEditor_code"
+            content={this.state.content}
+          />
         </div>
       </div>
     )
