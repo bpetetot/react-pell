@@ -1,0 +1,9 @@
+.htmlEditor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.htmlEditor > div {
+  width: 50%;
+  margin: 10px;
+}

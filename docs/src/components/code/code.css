@@ -1,0 +1,24 @@
+.code {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.code > pre {
+  margin: 0;
+  padding: 10px;
+  height: 100%;
+}
+
+.code > pre > code {
+  height: 300px;
+  white-space:pre-wrap;
+}
+
+.code__title {
+  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+  height: 32px;
+  line-height: 32px;
+  color: #AAA;
+  font-size: .8em;
+}

@@ -4,6 +4,19 @@ import pell from 'pell'
 
 import 'pell/dist/pell.min.css'
 
+// pass pell object to custom actions callback
+const mapActions = (actions) => {
+  if (actions) {
+    return actions.map((e) => {
+      if (typeof e === 'object' && e.result) {
+        return { ...e, result: () => e.result(pell) }
+      }
+      return e
+    })
+  }
+  return actions
+}
+
 class Editor extends Component {
   componentDidMount() {
     const {
@@ -20,7 +33,7 @@ class Editor extends Component {
     pell.init({
       element: this.container,
       onChange: html => onChange(html),
-      actions: this.mapActions(actions),
+      actions: mapActions(actions),
       styleWithCSS,
       classes: {
         actionbar: actionBarClass,
@@ -30,21 +43,11 @@ class Editor extends Component {
     })
 
     // set default content
-    this.container.content.innerHTML = defaultContent
+    this.getContent().innerHTML = defaultContent
   }
 
-  // pass pell object to custom actions callback
-  mapActions = (actions) => {
-    if (actions) {
-      return actions.map((e) => {
-        if (typeof e === 'object' && e.result) {
-          return { ...e, result: () => e.result(pell) }
-        }
-        return e
-      })
-    }
-    return actions
-  }
+  // return the editor content
+  getContent = () => this.container.content
 
   render() {
     return <div ref={e => (this.container = e)} className={this.props.containerClass} />

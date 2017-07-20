@@ -1,0 +1,13 @@
+# dependency directory
+node_modules/
+
+# coverage directory
+coverage/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# misc
+*.DS_Store
