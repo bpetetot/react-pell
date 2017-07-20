@@ -1,0 +1,19 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  height: 100%;
+}
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pell-container {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}

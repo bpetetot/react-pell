@@ -11,9 +11,11 @@
     "build": "cross-env NODE_ENV=production webpack -p --config ./config/webpack.config.js"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-highlight": "^0.10.0",
     "react-pell": "^0.2.0"
   },
   "devDependencies": {
@@ -63,7 +65,8 @@
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,
       "import/extensions": 0,
-      "react/forbid-prop-types": 0
+      "react/forbid-prop-types": 0,
+      "arrow-body-style": 0
     }
   }
 }
