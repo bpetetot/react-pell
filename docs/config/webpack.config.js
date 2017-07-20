@@ -13,9 +13,9 @@ function getEntrySources(sources) {
 
 function getLoaders(loaders) {
   if (dev) {
-    loaders.push({ loader: 'react-hot-loader' })
+    loaders.push('react-hot-loader')
   }
-  loaders.push({ loader: 'babel-loader' })
+  loaders.push('babel-loader')
   return loaders
 }
 
@@ -29,7 +29,7 @@ function getPlugins(plugins) {
 module.exports = {
   devtool: dev ? 'eval' : '',
   entry: {
-    examples: getEntrySources(['./src']),
+    examples: getEntrySources(['./src/index.jsx']),
   },
   output: {
     path: path.join(__dirname, '..', 'build'),
@@ -37,7 +37,7 @@ module.exports = {
     publicPath: '/build',
   },
   resolve: {
-    modules: [path.resolve('./src'), path.resolve('./src/components'), 'node_modules'],
+    modules: [path.resolve('./src'), 'node_modules'],
     extensions: ['.js', '.jsx'],
   },
   plugins: getPlugins([]),
@@ -46,7 +46,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: getLoaders([]),
-        include: [path.join(__dirname, 'src'), path.join(__dirname, '..', 'src')],
+        include: [path.join(__dirname, '..', 'src')],
       },
       {
         test: /\.css$/,
@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|gif|jpg|html)$/,
-        use: [{ loader: 'file-loader?name=[name].[ext]' }],
+        use: ['file-loader'],
       },
     ],
   },
