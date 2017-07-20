@@ -43,11 +43,11 @@ class Editor extends Component {
     })
 
     // set default content
-    this.getContent().innerHTML = defaultContent
+    this.container.content.innerHTML = defaultContent
   }
 
   // return the editor content
-  getContent = () => this.container.content
+  getContent = () => this.container.content.innerHTML
 
   render() {
     return <div ref={e => (this.container = e)} className={this.props.containerClass} />
