@@ -16,7 +16,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-highlight": "^0.10.0",
-    "react-pell": "^0.2.0"
+    "react-pell": "file:../"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
