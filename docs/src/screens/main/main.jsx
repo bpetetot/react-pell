@@ -11,6 +11,7 @@ const Main = () => {
       <Blockquote text="React component wrapping a HTML and Markdown editor based on the wysiwyg pell editor" />
       <HtmlEditor />
       <MarkdownEditor />
+      <h2>More samples coming soon...</h2>
     </div>
   )
 }

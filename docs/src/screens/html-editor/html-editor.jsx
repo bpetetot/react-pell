@@ -7,7 +7,7 @@ import Code from '../../components/code'
 import './html-editor.css'
 
 const defaultContent =
-  '<h2>Hello world</h2><div>Try the awesome <b style="font-style: italic;">pell HTML editor </b>with react.</div><div><u><br></u></div><div><u>You just have to :</u></div><pre>import Editor from \'react-pell\'</pre><pre>&lt;Editor onChange="this.handleChange" /&gt;</pre><div><br></div><div><br></div>'
+  '<h2>Hello world</h2><div>Try the awesome <b style="font-style: italic;">pell HTML editor </b>with react. 🦄</div><div><u><br></u></div><div><u>You just have to :</u></div><pre>import Editor from \'react-pell\'</pre><pre>&lt;Editor onChange="this.handleChange" /&gt;</pre><div><br></div><div><br></div>'
 
 class HtmlEditor extends Component {
   state = {

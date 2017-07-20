@@ -6,7 +6,24 @@ import Code from '../../components/code'
 
 import './markdown-editor.css'
 
-const defaultContent = '**Hello world**'
+const defaultContent =
+`
+## Hello world
+
+Try the awesome **pell editor** with react.
+It can produce markdown 🤘
+
+You just have to :
+
+\`\`\`
+import Editor from 'react-pell/plugins/markdown'
+\`\`\`
+
+\`\`\`
+<Editor onChange="this.handleChange" />
+\`\`\`
+`
+
 
 class MarkdownEditor extends Component {
   state = {

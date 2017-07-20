@@ -8,7 +8,7 @@ const Navbar = ({ className }) => {
   return (
     <header className={c('navbar', className)}>
       <div className="container">
-        <div className="navbar__title">react-pell</div>
+        <div className="navbar__title">react-pell samples</div>
         <nav className="navbar__menu">
           <a
             href="https://github.com/bpetetot/react-pell"
