@@ -45,6 +45,13 @@ class Editor extends Component {
     // set default content
     this.container.content.innerHTML = defaultContent
   }
+  
+  componentDidUpdate() {
+    const { defaultContent } = this.props
+    if (this.container.content.innerHTML !== defaultContent) {
+      this.container.content.innerHTML = defaultContent
+    }
+  }
 
   // return the editor content
   getContent = () => this.container.content.innerHTML
