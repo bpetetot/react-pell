@@ -19,8 +19,6 @@ export default Editor =>
   class extends Component {
     handleMarkdownChange = (html) => {
       const { converters = [], gfm = true } = this.props
-
-      console.log(html)
       this.props.onChange(htmlToMarkdown(html, converters, gfm))
     }
 
