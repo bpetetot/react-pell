@@ -1,6 +1,6 @@
 {
   "name": "react-pell",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React component wrapping a HTML and Markdown editor based on the wysiwyg pell editor",
   "main": "build/index.js",
   "repository": "https://github.com/bpetetot/react-pell.git",
