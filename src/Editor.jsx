@@ -27,6 +27,7 @@ class Editor extends Component {
       buttonClass,
       contentClass,
       defaultContent,
+      defaultParagraphSeparator
     } = this.props
 
     // initialize pell editor
@@ -40,6 +41,7 @@ class Editor extends Component {
         button: buttonClass,
         content: contentClass,
       },
+      defaultParagraphSeparator: defaultParagraphSeparator
     })
 
     // set default content
@@ -70,6 +72,7 @@ Editor.propTypes = {
   actionBarClass: PropTypes.string,
   buttonClass: PropTypes.string,
   contentClass: PropTypes.string,
+  defaultParagraphSeparator: PropTypes.string,
 }
 
 Editor.defaultProps = {
@@ -92,6 +95,7 @@ Editor.defaultProps = {
   actionBarClass: 'pell-actionbar',
   buttonClass: 'pell-button',
   contentClass: 'pell-content',
+  defaultParagraphSeparator: 'div',
 }
 
 export default Editor
