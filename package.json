@@ -5,7 +5,14 @@
   "main": "build/index.js",
   "repository": "https://github.com/bpetetot/react-pell.git",
   "author": "Benjamin Petetot <bpetetot@gmail.com>",
-  "keywords": ["react", "pell", "editor", "html", "markdown", "wysiwyg"],
+  "keywords": [
+    "react",
+    "pell",
+    "editor",
+    "html",
+    "markdown",
+    "wysiwyg"
+  ],
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext js,jsx src",
@@ -15,13 +22,13 @@
   },
   "prepack": "yarn build",
   "dependencies": {
-    "pell": "^0.7.0",
-    "showdown": "^1.7.1",
+    "pell": "^1.0.6",
+    "showdown": "^1.9.0",
     "to-markdown": "^3.1.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
-    "react": "^15.6.1"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
