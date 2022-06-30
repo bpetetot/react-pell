@@ -1,31 +1,28 @@
 /* eslint react/prop-types: 0 */
 import React, { Component } from 'react'
 import showdown from 'showdown'
-import toMarkdown from 'to-markdown/dist/to-markdown'
-import defaultConverters from './converters'
+import TurndownService from 'turndown';
+import { gfm } from 'turndown-plugin-gfm';
 
-const markdownToHtml = (markdown, gfm) => {
+
+const turndownService = new TurndownService();
+turndownService.use(gfm);
+
+const markdownToHtml = (markdown) => {
   const convertor = new showdown.Converter()
-  if (gfm) {
-    showdown.setFlavor('github')
-  }
+  showdown.setFlavor('github')
   return convertor.makeHtml(markdown)
 }
-
-const htmlToMarkdown = (html, converters, gfm) =>
-  toMarkdown(html, { converters: [...defaultConverters, ...converters], gfm })
 
 export default Editor =>
   class extends Component {
     handleMarkdownChange = (html) => {
-      const { converters = [], gfm = true } = this.props
-      this.props.onChange(htmlToMarkdown(html, converters, gfm))
+      this.props.onChange(turndownService.turndown(html))
     }
 
     // return the editor content
     getContent = () => {
-      const { converters = [], gfm = true } = this.props
-      return htmlToMarkdown(this.editor.getContent(), converters, gfm)
+      return turndownService.turndown(this.editor.getContent())
     }
 
     render() {
@@ -34,7 +31,7 @@ export default Editor =>
           ref={e => (this.editor = e)}
           {...this.props}
           styleWithCSS={false}
-          defaultContent={markdownToHtml(this.props.defaultContent, this.props.gfm)}
+          defaultContent={markdownToHtml(this.props.defaultContent)}
           onChange={this.handleMarkdownChange}
         />
       )
